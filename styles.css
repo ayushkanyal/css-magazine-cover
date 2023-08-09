@@ -1,0 +1,18 @@
+body {
+    font-family: 'Baskervville', serif;
+    color: linen;
+    background-color: rgb(20, 30, 40);
+}
+
+h1{
+    text-align: center;
+    color: orangered;
+    font-size: 8rem;
+    font-family: sans-serif;
+}
+
+h3{
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+}
