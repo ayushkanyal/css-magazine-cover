@@ -2,10 +2,16 @@ body {
     font-family: 'Baskervville', serif;
     color: linen;
     background-color: rgb(20, 30, 40);
+    padding: 0% 2%;
+    margin: 0%;
 }
 
 html{
     font-size: 62.5%;
+}
+
+h2, h3, h4, h5, h6{
+    font-family: "Raleway", sans-serif;
 }
 
 a{
@@ -66,8 +72,9 @@ h3{
 
 
 #content{
-
-    column-width: 25rem;
+    column-count: 3;
+    column-width: 15rem;
+    font-size: 16px;
 }
 
 #content > *{
@@ -85,6 +92,7 @@ h3{
 blockquote{
     margin:0px;
     padding: 0px;
+    break-inside: avoid-column;
 }
 
 .quote {
@@ -92,6 +100,8 @@ blockquote{
     font-size: 2.4rem;
     text-align: center;
     font-family: "Raleway", sans-serif;
+    margin: 0px;
+    padding: 0px;
   }
   
   .quote::before {
@@ -107,3 +117,58 @@ blockquote{
     border: 1px solid rgba(120, 120, 120, 0.6);
   }
 
+/* Text with images Section */
+
+.text-with-images{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+/* Article Section */
+
+.lists {
+    list-style-type: none;
+    margin-top: 2rem;
+    padding: 0px;
+  }
+  
+  .lists li {
+    margin-bottom: 1.5rem;
+  }
+  
+  .list-title, .list-subtitle {
+    color: #00beef;
+    margin: 0px;
+    text-align: left;
+  }
+
+
+
+/* Aside */
+
+aside{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 3rem;
+}
+
+.image-1, .image-3{
+    grid-column: span 2;
+}
+
+@media only screen and (max-width: 720px){
+    .image-wrapper{
+      grid-template-columns: 1fr;
+    }
+  }
+
+@media only screen  and (max-width: 600px){
+    .text-with-images{
+      grid-template-columns: 1fr;
+    }
+  }
